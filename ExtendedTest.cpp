@@ -302,13 +302,16 @@ void testQuantity(){
         it.next();
     }
     assert(!it.valid());
-    for (int c = cMin-100; c <= cMax+100; c++){
-         //sm.remove(c);
-        // assert(sm.search(c) == NULL_TVALUE);	
-		 //testIteratorSteps(sm, increasing);
+	//cout << "cMin" << "=" << cMin << '\n';
+	//cout << "cMax" << "=" << cMax << '\n';
+    for (int c = cMin-100; c <= cMax; c++){
+		//cout << c<<" ";
+         sm.remove(c);//
+         assert(sm.search(c) == NULL_TVALUE);	//
+		 testIteratorSteps(sm, increasing);//
     }
-   // assert(sm.size() == 0);
-   // assert(sm.isEmpty());
+    assert(sm.size() == 0);//
+    assert(sm.isEmpty());//
 }
 
 void testIterator() {
